@@ -85,20 +85,22 @@
     display: grid;
     grid-template-columns: repeat(4, 1fr);
     gap: 5rem;
-    
     margin-left: 5rem;
     margin-right: 10rem;
     padding: 0 2rem;
 
     @media (max-width: 992px) {
-      grid-template-columns: 1fr 1fr;
+      grid-template-columns: repeat(2, 1fr);
       gap: 3rem;
+      margin: 3rem auto;
+      padding: 0 2rem;
     }
 
     @media (max-width: 768px) {
       grid-template-columns: 1fr;
       text-align: center;
       padding: 0 1rem;
+      margin: 2rem auto;
     }
   }
 
@@ -133,6 +135,10 @@
       gap: 1.5rem;
       justify-content: flex-start;
 
+      @media (max-width: 992px) {
+        justify-content: flex-start;
+      }
+
       @media (max-width: 768px) {
         justify-content: center;
       }
@@ -143,7 +149,7 @@
         border: 1px solid #e77e23;
         border-radius: 50%;
         padding: 0.7rem;
-        
+
         &:hover {
           background-color: #F8D8BD;
         }
@@ -165,6 +171,10 @@
         display: flex;
         flex-direction: column;
         gap: 0.8rem;
+      }
+
+      @media (max-width: 992px) {
+        gap: 2rem;
       }
 
       @media (max-width: 768px) {
@@ -218,39 +228,37 @@
     }
   }
 
- .footer-bottom {
-  border-top: 1px solid #eee;
-  margin-top: 3rem;
-  padding-top: 2rem;
-  text-align: center;
+  .footer-bottom {
+    border-top: 1px solid #eee;
+    margin-top: 3rem;
+    padding-top: 2rem;
+    text-align: center;
+    max-width: 1280px;
+    margin-left: auto;
+    margin-right: auto;
+    font-family: 'Open Sans', sans-serif;
+    font-size: 1.1rem;
+    line-height: 1.6;
 
-  max-width: 1280px; // align with the rest of the layout
-  margin-left: auto;
-  margin-right: auto;
+    .footer-text {
+      margin-bottom: 0.5rem;
+    }
 
-  font-family: 'Open Sans', sans-serif;
-  font-size: 1.1rem;
-  line-height: 1.6;
+    .recaptcha-text {
+      margin-bottom: 0.5rem;
+      font-size: 1rem;
+    }
 
-  .footer-text{
-    margin-bottom: 0.5rem;
-  }
-  .recaptcha-text{
-    margin-bottom: 0.5rem;
-    font-size: 1rem;
-  }
-
-  .privacy-link {
-    color: inherit;
-    text-decoration: none;
-    transition: color 0.3s;
-
-    &:hover {
-      color: #e77e23;
+    .privacy-link {
+      color: inherit;
       text-decoration: none;
+      transition: color 0.3s;
+
+      &:hover {
+        color: #e77e23;
+        text-decoration: none;
+      }
     }
   }
 }
-}
-
 </style>

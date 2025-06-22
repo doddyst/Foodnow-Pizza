@@ -137,7 +137,7 @@ const menuOpen = ref(false)
       border-radius: 5px;
     }
 
-    @media (max-width: 768px) {
+    @media (max-width: 992px) {
       display: flex;
     }
   }
@@ -160,11 +160,16 @@ const menuOpen = ref(false)
   }
 }
 
-@media (max-width: 768px) {
+/* Tablet Style (768px–992px) */
+@media (max-width: 992px) {
   .navbar {
     flex-direction: column;
     align-items: center;
     padding: 1.5rem 2rem;
+
+    .logo {
+      margin: 0;
+    }
 
     .nav-links,
     .auth-buttons {
@@ -202,7 +207,6 @@ const menuOpen = ref(false)
     .auth-buttons {
       margin-right: 0 !important;
       text-align: center;
-      gap: 1rem;
 
       .register {
         background: none;

@@ -192,7 +192,7 @@ const totalPrice = computed(() => {
 
 .section-title {
   color: #e77e23;
-  font-size: 3rem; 
+  font-size: 3rem;
   font-weight: 700;
   text-align: left;
   margin-bottom: 1.5rem;
@@ -206,25 +206,25 @@ const totalPrice = computed(() => {
 
 .content-wrapper {
   flex: 1;
-  max-width: 81.25rem; 
-  margin-top: 6.8rem; 
-  margin-left: 5.3rem; 
+  max-width: 81.25rem;
+  margin-top: 6.8rem;
+  margin-left: 5.3rem;
 }
 
-/* --- Choose your Pizza Section --- */
+/* Pizza Options */
 .pizza-options {
   display: flex;
   flex-wrap: wrap;
-  gap: 1.8rem; 
-  margin-top: 2.8rem; 
+  gap: 1.8rem;
+  margin-top: 2.8rem;
   margin-bottom: 3rem;
 }
 
 .pizza-card {
   display: flex;
   align-items: center;
-  width: 24.5rem; 
-  height: 12.8rem; 
+  width: 24.5rem;
+  height: 12.8rem;
   background: #F8F8F6;
   border: 1px solid #ddd;
   border-radius: 1rem;
@@ -242,7 +242,7 @@ const totalPrice = computed(() => {
 }
 
 .pizza-img {
-  width: 9rem; 
+  width: 9rem;
   height: 9rem;
   object-fit: contain;
   margin: 0.625rem 2rem 0.625rem 0.625rem;
@@ -286,7 +286,7 @@ const totalPrice = computed(() => {
   z-index: 10;
 }
 
-/* --- Custom Pizza Section --- */
+/* Custom Pizza */
 .custom-pizza {
   margin-top: 9.5rem;
 }
@@ -302,7 +302,7 @@ const totalPrice = computed(() => {
   margin-top: 1rem;
 }
 .size-options span {
-  color: grey;             
+  color: grey;
 }
 
 .size-options input[type='radio'] {
@@ -336,11 +336,11 @@ const totalPrice = computed(() => {
   opacity: 1;
 }
 
-/* --- Topping Pills section --- */
+/* Topping Pills */
 .topping-options {
   display: grid;
   grid-template-columns: repeat(6, 1fr);
-  gap: 2rem 0rem;
+  gap: 2rem 0;
   margin-top: 2rem;
   margin-bottom: 7rem;
 }
@@ -365,7 +365,7 @@ const totalPrice = computed(() => {
   padding: 0 1rem;
   font-size: 1.25rem;
   font-weight: 600;
-  border: 1px solid #000000;
+  border: 1px solid #000;
   border-radius: 999px;
   transition: all 0.2s ease;
 }
@@ -388,19 +388,18 @@ const totalPrice = computed(() => {
   color: #e77e23;
 }
 
-/* --- Payment Summary section ---  */
+/* Payment Summary */
 .payment-summary {
   background: white;
   border-radius: 1rem;
   box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
   margin-top: 6.8rem;
-  margin-left: -50px;
-  margin-right: 70px;
-  width: 390px;
+  margin-left: -3.1rem;
+  margin-right: 4.4rem;
+  width: 24.375rem;
   padding: 1.5rem;
   height: fit-content;
 }
-
 .payment-summary h3 {
   color: #e77e23;
   font-size: 1.5rem;
@@ -442,7 +441,7 @@ const totalPrice = computed(() => {
   background: #cf6e1d;
 }
 
-/* --- Order Popup section --- */
+/* Popup */
 .popup-overlay {
   position: fixed;
   inset: 0;
@@ -486,88 +485,43 @@ const totalPrice = computed(() => {
   width: 100%;
 }
 
-@media (max-width: 768px) {
+/* Tablet (up to 992px) */
+@media (max-width: 992px) {
   .layout-wrapper {
     flex-direction: column;
     align-items: center;
-    gap: 2rem;
   }
 
   .content-wrapper {
-    margin: 2rem 1rem 0 1rem;
+    margin: 4rem 2rem 0;
     max-width: 100%;
   }
 
-  .pizza-options {
-    justify-content: center;
-  }
-
   .pizza-card {
+    flex-direction: row;
     width: 100%;
-    max-width: 22rem;
-    flex-direction: column;
-    height: auto;
-    padding: 1rem;
-    text-align: center;
+    max-width: 28rem;
   }
 
   .pizza-img {
-    margin: 0 auto 1rem auto;
-    width: 8rem;
-    height: 8rem;
-  }
-
-  .pizza-card-content {
-    align-items: center;
-  }
-
-  .custom-pizza {
-    margin-top: 3rem;
-  }
-
-  .size-options,
-  .topping-options {
-    flex-wrap: wrap;
-    justify-content: center;
+    width: 7.5rem;
+    height: 7.5rem;
+    margin-right: 1.25rem;
   }
 
   .topping-options {
-    grid-template-columns: repeat(2, 1fr);
-    gap: 1rem;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 1.2rem 0.5rem;
   }
 
   .payment-summary {
-    width: 90%;
-    margin: 0 auto 3rem auto;
+    width: 80%;
+    margin: 4rem auto;
   }
 
   .section-title {
-    font-size: 2.25rem;
     text-align: center;
-  }
-
-  .order-btn {
-    font-size: 1rem;
-    padding: 0.8rem 1.25rem;
-  }
-
-  .popup-card {
-    width: 90%;
-    max-width: 20rem;
-  }
-
-  .popup-card h2 {
-    font-size: 1.25rem;
-  }
-
-  .popup-card p {
-    font-size: 1rem;
-  }
-
-  .popup-close {
-    font-size: 1rem;
-    padding: 0.75rem 1.25rem;
+    font-size: 2.5rem;
   }
 }
-
 </style>
