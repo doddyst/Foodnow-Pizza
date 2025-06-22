@@ -60,13 +60,14 @@
     </div>
 
     <div class="footer-bottom">
-      <p class="footer-text">
-        © 2022 Foodnow. All Rights Reserved. Powered by PT. Timedoor Indonesia. | Privacy Policy
-      </p>
-      <p>
-        This site is protected by reCAPTCHA and the Google Privacy Policy and Terms of Service apply.
-      </p>
-    </div>
+  <p class="footer-text">
+   Copyright © 2022 Foodnow. All Rights Reserved. Powered by PT. Timedoor Indonesia. | 
+    <a href="#" class="privacy-link">Privacy Policy</a>
+  </p>
+  <p class="recaptcha-text">
+    This site is protected by reCAPTCHA and the Google Privacy Policy and Terms of Service apply.
+  </p>
+</div>
   </footer>
 </template>
 
@@ -75,7 +76,7 @@
 <style scoped lang="scss">
 .footer {
   background-color: #F8F8F6;
-  padding: 4rem 2rem 3rem;
+  padding: 4rem 2rem 0.6rem;
   border-top: 1px solid #eee;
   font-family: 'Open Sans', sans-serif;
   color: #333;
@@ -138,11 +139,11 @@
 
       img {
         width: 2.8rem;
-        height: 2.8rem;
+        height: 2.9rem;
         border: 1px solid #e77e23;
         border-radius: 50%;
         padding: 0.7rem;
-
+        
         &:hover {
           background-color: #F8D8BD;
         }
@@ -182,7 +183,6 @@
       &:hover,
       &.active {
         color: #e77e23;
-        font-weight: 600;
       }
 
       @media (max-width: 768px) {
@@ -218,17 +218,39 @@
     }
   }
 
-  .footer-bottom {
-    border-top: 1px solid #eee;
-    margin-top: 3rem;
-    padding-top: 2rem;
-    text-align: center;
-    font-size: 1rem;
+ .footer-bottom {
+  border-top: 1px solid #eee;
+  margin-top: 3rem;
+  padding-top: 2rem;
+  text-align: center;
 
-    .footer-text {
-      margin-bottom: 1rem;
+  max-width: 1280px; // align with the rest of the layout
+  margin-left: auto;
+  margin-right: auto;
+
+  font-family: 'Open Sans', sans-serif;
+  font-size: 1.1rem;
+  line-height: 1.6;
+
+  .footer-text{
+    margin-bottom: 0.5rem;
+  }
+  .recaptcha-text{
+    margin-bottom: 0.5rem;
+    font-size: 1rem;
+  }
+
+  .privacy-link {
+    color: inherit;
+    text-decoration: none;
+    transition: color 0.3s;
+
+    &:hover {
+      color: #e77e23;
+      text-decoration: none;
     }
   }
+}
 }
 
 </style>

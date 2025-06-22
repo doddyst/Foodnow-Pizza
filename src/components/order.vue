@@ -301,6 +301,10 @@ const totalPrice = computed(() => {
   gap: 1.5rem;
   margin-top: 1rem;
 }
+.size-options span {
+  color: grey;             
+}
+
 .size-options input[type='radio'] {
   appearance: none;
   width: 1.25rem;
@@ -379,7 +383,7 @@ const totalPrice = computed(() => {
   border-color: #e77e23;
   color: #e77e23;
 }
-.topping-pill:hover span {
+.topping-pill:not(.disabled):hover span {
   border-color: #e77e23;
   color: #e77e23;
 }

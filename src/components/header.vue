@@ -116,6 +116,7 @@ const menuOpen = ref(false)
 
       &:hover {
         background-color: #C16515;
+        color: white;
       }
     }
   }
