@@ -159,7 +159,7 @@ const menuOpen = ref(false)
   }
 }
 
-/* Tablet Style (768px–992px) */
+
 @media (max-width: 992px) {
   .navbar {
     flex-direction: column;

@@ -35,7 +35,7 @@
     <div class="custom-pizza">
       <h2 class="section-title">Custom Pizza</h2>
 
-      <div class="size-selection">
+      <div class="size-selection" ref="sizeSection">
         <strong>Size</strong>
         <div class="size-options">
           <label v-for="size in sizes" :key="size.name">
@@ -136,31 +136,31 @@ import pizzaJson from '../assets/pizza-list.json'
 import sizeJson from '../assets/size-list.json'
 import toppingJson from '../assets/topping-list.json'
 
-
 const pizzas = ref(pizzaJson.data)
 const sizes = ref(sizeJson.data)
 const toppings = ref(toppingJson.data)
-
 
 const selectedPizza = ref(0)
 const selectedSize = ref(sizes.value[0])
 const selectedToppings = ref([])
 
-
 const showPopup = ref(false)
-
+const sizeSection = ref(null) 
 
 function selectPizza(index) {
-  selectedPizza.value = index
-  selectedSize.value = sizes.value[0] 
-  selectedToppings.value = []         
-}
+  if (selectedPizza.value === index) {
 
+    sizeSection.value?.scrollIntoView({ behavior: 'smooth', block: 'start' })
+  } else {
+    selectedPizza.value = index
+    selectedSize.value = sizes.value[0]
+    selectedToppings.value = []
+  }
+}
 
 const allowedToppingIds = computed(() => {
   return pizzas.value[selectedPizza.value]?.toppings || []
 })
-
 
 const sizePrice = computed(() => selectedSize.value?.extra_price || 0)
 
@@ -179,6 +179,7 @@ const totalPrice = computed(() => {
   return (displayPizzaPrice.value + sizePrice.value + toppingCost).toFixed(2)
 })
 </script>
+
 
 
 <style scoped>
@@ -484,7 +485,6 @@ const totalPrice = computed(() => {
   width: 100%;
 }
 
-/* Tablet (up to 992px) */
 @media (max-width: 992px) {
   .layout-wrapper {
     flex-direction: column;
