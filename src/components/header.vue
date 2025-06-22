@@ -39,7 +39,6 @@ const menuOpen = ref(false)
 
 
 <style lang="scss">
-@import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;600;700&display=swap');
 
 .header {
   position: relative;

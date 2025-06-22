@@ -182,7 +182,6 @@ const totalPrice = computed(() => {
 
 
 <style scoped>
-@import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;600;700&display=swap');
 
 .order-section {
   padding: 3rem;
