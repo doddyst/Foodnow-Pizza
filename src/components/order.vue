@@ -7,7 +7,7 @@
     <div v-if="pizzas.length" class="pizza-options">
       <div
         v-for="(pizza, i) in pizzas"
-        :key="i"
+        :key="pizza.id"
         :class="['pizza-card', { active: selectedPizza === i }]"
         @click="selectPizza(i)"
       >
@@ -38,7 +38,7 @@
       <div class="size-selection" ref="sizeSection">
         <strong>Size</strong>
         <div class="size-options">
-          <label v-for="size in sizes" :key="size.name">
+          <label v-for="size in sizes" :key="size.id">
             <input
               type="radio"
               name="size"
